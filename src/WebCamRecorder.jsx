@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import React from "react";
 import FileUpload2 from "./FileUpload2";
 import axios from "axios";
+import Webcam from "webcam";
 
 function WebCamRecorder(){ 
   const [isRecording, setIsRecording] = useState(false);
@@ -9,16 +10,16 @@ function WebCamRecorder(){
   const streamRef = useRef<null | MediaStream>(null);
   const [downloadLink, setDownloadLink] = useState("");
   const streamRecorderRef = useRef<null | MediaRecorder>(null);
-  const [audioSource, setAudioSource] = useState<string>("");
+  const [audioSource] = useState<string>("");
   const [videoSource, setVideoSource] = useState<string>("");
-  const [audioSourceOptions, setAudioSourceOptions] = useState<
-    Record<string, string>[]
-  >([]);
-  const [videoSourceOptions, setVideoSourceOptions] = useState<
-    Record<string, string>[]
-  >([]);
-  const [error, setError] = useState<null | Error>(null);
-  const chunks = useRef<any[]>([]);
+
+   [audioSourceOptions, setAudioSourceOptions] = useState<
+    Record<string, string>   ([]);
+   cons[videoSourceOptions, setVideoSourceOptions] = useState<
+    Record<string, string>([]);
+  
+   [error, setError] = useState<null | Error>(null);
+  chunks = useRef([]);
 
   function startRecording() {
     if (isRecording) {

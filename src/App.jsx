@@ -1,13 +1,13 @@
 import "./App.css";
-import WebCamRecorder from "./WebCamRecorder";
 import FileUploader from "./Upload2Sever";
 import { useState } from "react";
+import WebcamStreamCapture from   "./Recorder";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <WebCamRecorder />
+        <WebcamStreamCapture />
       </header>
     </div>
   );
@@ -22,5 +22,6 @@ export function Appup() {
     </div>
   );
 }
+
 
 export default App;
