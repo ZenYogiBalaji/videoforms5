@@ -99,7 +99,7 @@ import axios from "axios";
   
     // Request made to the backend api
     // Send formData object
-    axios.post("https://balaji.today/upload4.php", formData);
+    axios.post("https://balaji.today/upload5.php", formData);
 
   
     alert(URL.createObjectURL(mediablob) + "-------------------------Uploaded------------ ");
